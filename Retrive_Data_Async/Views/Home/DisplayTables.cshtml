@@ -1,0 +1,83 @@
+﻿@model DisplayTablesViewModel
+
+<p>Time taken: @ViewBag.ElapsedTime milliseconds</p>
+
+<h2>Display Tables</h2>
+
+<table class="container"> 
+    <thead>
+        <h2>Customer Table</h2>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>ProductName</th>
+            <th>Cost</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.CustomerData)
+        {
+            <tr>
+                <td>@item.ID</td>
+                <td>@item.Name</td>
+                <td>@item.ProductName</td>
+                <td>@item.Cost</td>
+                <td>@item.Status</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<h2>Employee</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Salary</th>
+            <th>Gender</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.EmployeeData)
+        {
+            <tr>
+                <td>@item.ID</td>
+                <td>@item.Name</td>
+                <td>@item.Department</td>
+                <td>@item.Salary</td>
+                <td>@item.Gender</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<h2>Student</h2>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Section</th>
+            <th>Gender</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.StudentData)
+        {
+            <tr>
+                <td>@item.ID</td>
+                <td>@item.Name</td>
+                <td>@item.Age</td>
+                <td>@item.Section</td>
+                <td>@item.Gender</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<p>Time taken: @ViewBag.ElapsedTime milliseconds</p>
+
